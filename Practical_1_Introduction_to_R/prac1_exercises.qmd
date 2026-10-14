@@ -1,0 +1,53 @@
+---
+title: "MB1A Practical 1"
+author: "Rianna van der Hart"
+---
+
+Round() Function:
+```{r}
+pi = 3.14159
+pi_rounded = round(pi)
+print(pi_rounded)
+```
+Round() Function Continued:
+
+```{r}
+pi = 3.14159
+pi_rounded_2dp = round(pi, digits = 2)
+print(pi_rounded_2dp)
+```
+Rep() Function:
+
+```{r}
+rep(5, 10)
+#or
+print(rep(x=5, times=10))
+```
+Character, Numerical, and Logical Variables:
+
+```{r}
+char = "hello!"
+num = 220
+log = TRUE
+
+print(char)
+print(class(char))
+
+print(num)
+print(class(num))
+
+print(log)
+print(class(log))
+```
+Using Variables of Different Types:
+```{r}
+cell_ID_1 = "CX1"
+cell_ID_2 = "CX2"
+treated_1 = TRUE
+treated_2 = FALSE
+num_cells_before_1 = 5415
+num_cells_before_2 = 8123
+num_cells_after_1 = 1432
+num_cells_after_2 = 7543
+```
+
