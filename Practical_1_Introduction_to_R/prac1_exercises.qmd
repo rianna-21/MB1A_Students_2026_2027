@@ -3,6 +3,11 @@ title: "MB1A Practical 1"
 author: "Rianna van der Hart"
 ---
 
+```{r}
+library(tidyverse)
+library(gt)
+```
+
 Round() Function:
 ```{r}
 pi = 3.14159
@@ -50,4 +55,34 @@ num_cells_before_2 = 8123
 num_cells_after_1 = 1432
 num_cells_after_2 = 7543
 ```
+
+Using Vectors for Variables:
+```{r}
+cell_IDs = c("CX1", "CX2")
+treated_vals = c(TRUE, FALSE)
+num_cells_before_vals = c(5415, 8123)
+num_cells_after_vals = c(1432, 7543)
+```
+
+Using Vectors for Variables Continued:
+```{r}
+all_my_pets = c("dog", "horse", "guinea pig", "chicken", "cat")
+fourth_pet = all_my_pets[4]
+print(fourth_pet)
+```
+Using the Tibble() Function:
+```{r}
+library(tidyverse)
+library(gt)
+
+radiation_experiment_data = tibble(
+  cell_ID = c("CX1", "CX2"),
+  treated = c(TRUE, FALSE),
+  num_cells_before = c(5415, 8123),
+  num_cells_after = c(1432, 7543)
+)
+```
+
+
+
 
