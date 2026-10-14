@@ -12,3 +12,15 @@ gt(head(lead_data))
 
 The above table shows the number of cases of children between the age of 0 and 15 who were reported to have elevated levels of the toxic heavy metal lead in their blood. The data covers the years 2015-2024.
 
+```{r}
+ggplot(lead_data, aes(
+  x = date,
+  y = metric_value
+)) +
+  geom_line(colour = "red") +
+  xlab("Date") +
+  ylab("Number of Cases") +
+  ggtitle("Number of Cases of Child Lead Exposure")
+```
+
+
