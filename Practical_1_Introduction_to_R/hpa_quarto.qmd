@@ -1,0 +1,20 @@
+---
+title: "MB1A Practical 1"
+author: "Rianna van der Hart"
+---
+
+We are going to look at the number of regionally elevated genes in the forebrain (i.e the cerebral cortex, basal ganglia, thalamus, and hypothalamus) of human, pig, and mice tissue. Genes are categorised as 'regionally elevated' if they show significantly higher levels of expression in a specified region compared to the rest of the brain.
+
+
+```{r}
+#In the below code, the prefix 're' is used to identify variables relating to regional elevation, and the latter half of the variable identifies the associated organism.
+
+re_human = sum(180, 83, 57, 110)
+re_pig = sum(109, 157, 31, 45)
+re_mouse = sum(55, 185, 60, 98)
+
+print(paste("Human: ", re_human))
+print(paste("Pig: ", re_pig))
+print(paste("Mouse: ", re_mouse))
+```
+The human forebrain tissue had 430 regionally elevated genes, the pig forebrain tissue had 342 regionally elevated genes, and the mouse forebrain tissue had 398 regionally elevated genes. Therefore, the human forebrain tissue showed the highest number of regionally elevated genes.
