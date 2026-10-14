@@ -3,11 +3,6 @@ title: "MB1A Practical 1"
 author: "Rianna van der Hart"
 ---
 
-```{r}
-library(tidyverse)
-library(gt)
-```
-
 Round() Function:
 ```{r}
 pi = 3.14159
@@ -70,6 +65,7 @@ all_my_pets = c("dog", "horse", "guinea pig", "chicken", "cat")
 fourth_pet = all_my_pets[4]
 print(fourth_pet)
 ```
+
 Using the Tibble() Function:
 ```{r}
 library(tidyverse)
@@ -81,6 +77,13 @@ radiation_experiment_data = tibble(
   num_cells_before = c(5415, 8123),
   num_cells_after = c(1432, 7543)
 )
+gt(radiation_experiment_data)
+```
+
+Reading CSV Files:
+```{r}
+weather = read_csv("data/weather_data.csv")
+gt(weather)
 ```
 
 

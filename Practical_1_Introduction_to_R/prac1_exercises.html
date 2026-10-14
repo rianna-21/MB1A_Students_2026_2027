@@ -111,38 +111,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>Round() Function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyverse' was built under R version 4.6.1</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pi <span class="ot">=</span> <span class="fl">3.14159</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pi_rounded <span class="ot">=</span> <span class="fu">round</span>(pi)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(pi_rounded)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.6.1</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tibble' was built under R version 4.6.1</code></pre>
+<p>Round() Function Continued:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pi <span class="ot">=</span> <span class="fl">3.14159</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pi_rounded_2dp <span class="ot">=</span> <span class="fu">round</span>(pi, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(pi_rounded_2dp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.14</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.6.1</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.6.1</code></pre>
+<p>Rep() Function:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 5 5 5 5 5 5 5 5 5 5</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.6.1</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#or</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">rep</span>(<span class="at">x=</span><span class="dv">5</span>, <span class="at">times=</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 5 5 5 5 5 5 5 5 5 5</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'dplyr' was built under R version 4.6.1</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'stringr' was built under R version 4.6.1</code></pre>
+<p>Character, Numerical, and Logical Variables:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>char <span class="ot">=</span> <span class="st">"hello!"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">220</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>log <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(char)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "hello!"</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'forcats' was built under R version 4.6.1</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(char))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'lubridate' was built under R version 4.6.1</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 220</code></pre>
 </div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(log)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(log))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "logical"</code></pre>
+</div>
+</div>
+<p>Using Variables of Different Types:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>cell_ID_1 <span class="ot">=</span> <span class="st">"CX1"</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>cell_ID_2 <span class="ot">=</span> <span class="st">"CX2"</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>treated_1 <span class="ot">=</span> <span class="cn">TRUE</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>treated_2 <span class="ot">=</span> <span class="cn">FALSE</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>num_cells_before_1 <span class="ot">=</span> <span class="dv">5415</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>num_cells_before_2 <span class="ot">=</span> <span class="dv">8123</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>num_cells_after_1 <span class="ot">=</span> <span class="dv">1432</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>num_cells_after_2 <span class="ot">=</span> <span class="dv">7543</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Using Vectors for Variables:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>cell_IDs <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"CX1"</span>, <span class="st">"CX2"</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>treated_vals <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>num_cells_before_vals <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5415</span>, <span class="dv">8123</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>num_cells_after_vals <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1432</span>, <span class="dv">7543</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Using Vectors for Variables Continued:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>all_my_pets <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"dog"</span>, <span class="st">"horse"</span>, <span class="st">"guinea pig"</span>, <span class="st">"chicken"</span>, <span class="st">"cat"</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>fourth_pet <span class="ot">=</span> all_my_pets[<span class="dv">4</span>]</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fourth_pet)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "chicken"</code></pre>
+</div>
+</div>
+<p>Using the Tibble() Function:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.2.1     ✔ readr     2.2.0
@@ -155,110 +214,1089 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>radiation_experiment_data <span class="ot">=</span> <span class="fu">tibble</span>(</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">cell_ID =</span> <span class="fu">c</span>(<span class="st">"CX1"</span>, <span class="st">"CX2"</span>),</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">treated =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">num_cells_before =</span> <span class="fu">c</span>(<span class="dv">5415</span>, <span class="dv">8123</span>),</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">num_cells_after =</span> <span class="fu">c</span>(<span class="dv">1432</span>, <span class="dv">7543</span>)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(radiation_experiment_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="tnezkhrkoe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tnezkhrkoe table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tnezkhrkoe thead, #tnezkhrkoe tbody, #tnezkhrkoe tfoot, #tnezkhrkoe tr, #tnezkhrkoe td, #tnezkhrkoe th {
+  border-style: none;
+}
+
+#tnezkhrkoe p {
+  margin: 0;
+  padding: 0;
+}
+
+#tnezkhrkoe .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tnezkhrkoe .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tnezkhrkoe .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tnezkhrkoe .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tnezkhrkoe .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tnezkhrkoe .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tnezkhrkoe .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tnezkhrkoe .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tnezkhrkoe .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tnezkhrkoe .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tnezkhrkoe .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tnezkhrkoe .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tnezkhrkoe .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tnezkhrkoe .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tnezkhrkoe .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnezkhrkoe .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tnezkhrkoe .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tnezkhrkoe .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tnezkhrkoe .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnezkhrkoe .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tnezkhrkoe .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnezkhrkoe .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tnezkhrkoe .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnezkhrkoe .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tnezkhrkoe .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tnezkhrkoe .gt_left {
+  text-align: left;
+}
+
+#tnezkhrkoe .gt_center {
+  text-align: center;
+}
+
+#tnezkhrkoe .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tnezkhrkoe .gt_font_normal {
+  font-weight: normal;
+}
+
+#tnezkhrkoe .gt_font_bold {
+  font-weight: bold;
+}
+
+#tnezkhrkoe .gt_font_italic {
+  font-style: italic;
+}
+
+#tnezkhrkoe .gt_super {
+  font-size: 65%;
+}
+
+#tnezkhrkoe .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tnezkhrkoe .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tnezkhrkoe .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tnezkhrkoe .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tnezkhrkoe .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tnezkhrkoe .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tnezkhrkoe .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#tnezkhrkoe .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#tnezkhrkoe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="cell_ID" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">cell_ID</th>
+<th id="treated" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">treated</th>
+<th id="num_cells_before" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">num_cells_before</th>
+<th id="num_cells_after" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">num_cells_after</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="cell_ID">CX1</td>
+<td class="gt_row gt_center" headers="treated">TRUE</td>
+<td class="gt_row gt_right" headers="num_cells_before">5415</td>
+<td class="gt_row gt_right" headers="num_cells_after">1432</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="cell_ID">CX2</td>
+<td class="gt_row gt_center" headers="treated">FALSE</td>
+<td class="gt_row gt_right" headers="num_cells_before">8123</td>
+<td class="gt_row gt_right" headers="num_cells_after">7543</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Reading CSV Files:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>weather <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"data/weather_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'gt' was built under R version 4.6.1</code></pre>
+<pre><code>Rows: 9 Columns: 10
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (3): station_id, weather_condition, wind_direction
+dbl  (6): temperature_c, humidity_pct, wind_speed_kmh, pressure_hpa, precipi...
+dttm (1): observation_time
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(weather)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="arurmcpnfo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#arurmcpnfo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#arurmcpnfo thead, #arurmcpnfo tbody, #arurmcpnfo tfoot, #arurmcpnfo tr, #arurmcpnfo td, #arurmcpnfo th {
+  border-style: none;
+}
+
+#arurmcpnfo p {
+  margin: 0;
+  padding: 0;
+}
+
+#arurmcpnfo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#arurmcpnfo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#arurmcpnfo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#arurmcpnfo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#arurmcpnfo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#arurmcpnfo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#arurmcpnfo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#arurmcpnfo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#arurmcpnfo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#arurmcpnfo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#arurmcpnfo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#arurmcpnfo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#arurmcpnfo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#arurmcpnfo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#arurmcpnfo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#arurmcpnfo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#arurmcpnfo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#arurmcpnfo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#arurmcpnfo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#arurmcpnfo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#arurmcpnfo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#arurmcpnfo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#arurmcpnfo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#arurmcpnfo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#arurmcpnfo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#arurmcpnfo .gt_left {
+  text-align: left;
+}
+
+#arurmcpnfo .gt_center {
+  text-align: center;
+}
+
+#arurmcpnfo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#arurmcpnfo .gt_font_normal {
+  font-weight: normal;
+}
+
+#arurmcpnfo .gt_font_bold {
+  font-weight: bold;
+}
+
+#arurmcpnfo .gt_font_italic {
+  font-style: italic;
+}
+
+#arurmcpnfo .gt_super {
+  font-size: 65%;
+}
+
+#arurmcpnfo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#arurmcpnfo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#arurmcpnfo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#arurmcpnfo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#arurmcpnfo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#arurmcpnfo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#arurmcpnfo .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#arurmcpnfo .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#arurmcpnfo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="station_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">station_id</th>
+<th id="observation_time" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">observation_time</th>
+<th id="temperature_c" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">temperature_c</th>
+<th id="humidity_pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">humidity_pct</th>
+<th id="wind_speed_kmh" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">wind_speed_kmh</th>
+<th id="pressure_hpa" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">pressure_hpa</th>
+<th id="precipitation_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">precipitation_mm</th>
+<th id="cloud_cover_pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">cloud_cover_pct</th>
+<th id="weather_condition" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">weather_condition</th>
+<th id="wind_direction" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">wind_direction</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-01 06:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">14.2</td>
+<td class="gt_row gt_right" headers="humidity_pct">88</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">8.4</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1017.3</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.0</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">75</td>
+<td class="gt_row gt_left" headers="weather_condition">Cloudy</td>
+<td class="gt_row gt_left" headers="wind_direction">SW</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-01 12:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">20.1</td>
+<td class="gt_row gt_right" headers="humidity_pct">61</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">12.7</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1016.5</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.0</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">40</td>
+<td class="gt_row gt_left" headers="weather_condition">Partly Cloudy</td>
+<td class="gt_row gt_left" headers="wind_direction">W</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-01 18:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">18.7</td>
+<td class="gt_row gt_right" headers="humidity_pct">68</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">10.2</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1015.9</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.4</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">60</td>
+<td class="gt_row gt_left" headers="weather_condition">Light Rain</td>
+<td class="gt_row gt_left" headers="wind_direction">W</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-02 06:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">13.5</td>
+<td class="gt_row gt_right" headers="humidity_pct">91</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">6.8</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1014.8</td>
+<td class="gt_row gt_right" headers="precipitation_mm">1.2</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">95</td>
+<td class="gt_row gt_left" headers="weather_condition">Overcast</td>
+<td class="gt_row gt_left" headers="wind_direction">S</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-02 12:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">17.8</td>
+<td class="gt_row gt_right" headers="humidity_pct">74</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">14.1</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1013.6</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.0</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">70</td>
+<td class="gt_row gt_left" headers="weather_condition">Cloudy</td>
+<td class="gt_row gt_left" headers="wind_direction">SW</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-02 18:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">16.9</td>
+<td class="gt_row gt_right" headers="humidity_pct">79</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">11.3</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1012.9</td>
+<td class="gt_row gt_right" headers="precipitation_mm">2.8</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">90</td>
+<td class="gt_row gt_left" headers="weather_condition">Rain</td>
+<td class="gt_row gt_left" headers="wind_direction">SW</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-03 06:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">12.8</td>
+<td class="gt_row gt_right" headers="humidity_pct">93</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">4.5</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1018.1</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.0</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">30</td>
+<td class="gt_row gt_left" headers="weather_condition">Clear</td>
+<td class="gt_row gt_left" headers="wind_direction">E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-03 12:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">22.4</td>
+<td class="gt_row gt_right" headers="humidity_pct">52</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">9.6</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1019.4</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.0</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">10</td>
+<td class="gt_row gt_left" headers="weather_condition">Sunny</td>
+<td class="gt_row gt_left" headers="wind_direction">NE</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="station_id">CAM001</td>
+<td class="gt_row gt_right" headers="observation_time">2026-07-03 18:00:00</td>
+<td class="gt_row gt_right" headers="temperature_c">21.0</td>
+<td class="gt_row gt_right" headers="humidity_pct">58</td>
+<td class="gt_row gt_right" headers="wind_speed_kmh">8.7</td>
+<td class="gt_row gt_right" headers="pressure_hpa">1018.7</td>
+<td class="gt_row gt_right" headers="precipitation_mm">0.0</td>
+<td class="gt_row gt_right" headers="cloud_cover_pct">15</td>
+<td class="gt_row gt_left" headers="weather_condition">Sunny</td>
+<td class="gt_row gt_left" headers="wind_direction">NE</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
-<p>Round() Function:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>pi <span class="ot">=</span> <span class="fl">3.14159</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>pi_rounded <span class="ot">=</span> <span class="fu">round</span>(pi)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(pi_rounded)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div>
-<p>Round() Function Continued:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>pi <span class="ot">=</span> <span class="fl">3.14159</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>pi_rounded_2dp <span class="ot">=</span> <span class="fu">round</span>(pi, <span class="at">digits =</span> <span class="dv">2</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(pi_rounded_2dp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.14</code></pre>
-</div>
-</div>
-<p>Rep() Function:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">5</span>, <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] 5 5 5 5 5 5 5 5 5 5</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#or</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">rep</span>(<span class="at">x=</span><span class="dv">5</span>, <span class="at">times=</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] 5 5 5 5 5 5 5 5 5 5</code></pre>
-</div>
-</div>
-<p>Character, Numerical, and Logical Variables:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>char <span class="ot">=</span> <span class="st">"hello!"</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">220</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>log <span class="ot">=</span> <span class="cn">TRUE</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(char)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "hello!"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(char))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "character"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(num)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 220</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(num))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "numeric"</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(log)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(log))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "logical"</code></pre>
-</div>
-</div>
-<p>Using Variables of Different Types:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>cell_ID_1 <span class="ot">=</span> <span class="st">"CX1"</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>cell_ID_2 <span class="ot">=</span> <span class="st">"CX2"</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>treated_1 <span class="ot">=</span> <span class="cn">TRUE</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>treated_2 <span class="ot">=</span> <span class="cn">FALSE</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>num_cells_before_1 <span class="ot">=</span> <span class="dv">5415</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>num_cells_before_2 <span class="ot">=</span> <span class="dv">8123</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>num_cells_after_1 <span class="ot">=</span> <span class="dv">1432</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>num_cells_after_2 <span class="ot">=</span> <span class="dv">7543</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Using Vectors for Variables:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>cell_IDs <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"CX1"</span>, <span class="st">"CX2"</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>treated_vals <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>num_cells_before_vals <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5415</span>, <span class="dv">8123</span>)</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>num_cells_after_vals <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1432</span>, <span class="dv">7543</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Using Vectors for Variables Continued:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>all_my_pets <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"dog"</span>, <span class="st">"horse"</span>, <span class="st">"guinea pig"</span>, <span class="st">"chicken"</span>, <span class="st">"cat"</span>)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>fourth_pet <span class="ot">=</span> all_my_pets[<span class="dv">4</span>]</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(fourth_pet)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "chicken"</code></pre>
-</div>
-</div>
-<p>Using the Tibble() Function:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>radiation_experiment_data <span class="ot">=</span> <span class="fu">tibble</span>(</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cell_ID =</span> <span class="fu">c</span>(<span class="st">"CX1"</span>, <span class="st">"CX2"</span>),</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">treated =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">num_cells_before =</span> <span class="fu">c</span>(<span class="dv">5415</span>, <span class="dv">8123</span>),</span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">num_cells_after =</span> <span class="fu">c</span>(<span class="dv">1432</span>, <span class="dv">7543</span>)</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 </main>
