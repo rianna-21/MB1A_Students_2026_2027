@@ -1,0 +1,81 @@
+---
+title: "MB1A Practical 2"
+---
+
+```{r}
+library(gt)
+library(tidyverse)
+library(maps)
+
+migratory_connectivity_dataset = read_csv("data/migratory_connectivity_dataset.csv")
+gt(head(migratory_connectivity_dataset))
+```
+```{r}
+glimpse(migratory_connectivity_dataset)
+```
+
+```{r}
+bird_migration_sites = read_csv("data/migratory_connectivity_dataset.csv")
+bird_migration_selected = bird_migration_sites |>
+  select(Site, winterLongitude, winterLatitude, pslon, pslat, iblon, iblat, awestlon, awestlat) |>
+  distinct() |>
+  rename(Winter_Longitude = winterLongitude,
+    Winter_Latitude = winterLatitude,
+    Stopover_Longitude = pslon,
+    Stopover_Latitude = pslat,
+    Iberian_Longitude = iblon,
+    Iberian_Latitude = iblat,
+    Westmost_Longitude = awestlon,
+    Westmost_Latitude = awestlat)
+
+bird_migration_summary = bird_migration_selected |> group_by(Site) |>
+  summarise(
+    Median_Lat_Stopover = median(Stopover_Latitude, na.rm = TRUE), 
+    Median_Long_Stopover = median(Stopover_Longitude, na.rm = TRUE), 
+    Median_Lat_Iberian = median(Iberian_Latitude, na.rm = TRUE), 
+    Median_Long_Iberian = median(Iberian_Longitude, na.rm = TRUE), 
+    Median_Lat_Westmost = median(Westmost_Latitude, na.rm = TRUE), 
+    Median_Long_Westmost = median(Westmost_Longitude, na.rm = TRUE), 
+    Median_Lat_Winter = median(Winter_Latitude, na.rm = TRUE), 
+    Median_Long_Winter = median(Winter_Longitude, na.rm = TRUE)
+    )
+
+gt(bird_migration_summary)
+```
+
+```{r}
+bird_breeding_exc = read_csv("data/bird_breeding_exc.csv")
+
+combined_bird_data = full_join(bird_breeding_exc, bird_migration_summary)
+gt(combined_bird_data)
+```
+
+```{r}
+combined_bird_piv <- combined_bird_data |>
+  pivot_longer(
+    cols = ends_with(c("_Longitude", "_Latitude")),
+    names_sep = "_",
+    names_to = c("Location_Type", ".value")
+  )
+
+gt(combined_bird_piv)
+```
+
+```{r}
+keep_spring = c("Breeding, Stopover, Winter")
+keep_autumn = c("Breeding, Stopover, Westmost, Winter")
+
+spring_data = combined_bird_piv |>
+  filter(Location_Type %in% keep_spring)
+autumn_data = combined_bird_piv |>
+  filter(Location_Type %in% keep_autumn)
+
+write_csv(spring_data, "output/birds_spring.csv")
+write_csv(autumn_data, "output/birds_autumn.csv")
+```
+
+
+
+
+
+
