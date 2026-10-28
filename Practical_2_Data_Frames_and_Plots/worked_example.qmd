@@ -30,14 +30,13 @@ bird_migration_selected = bird_migration_sites |>
 
 bird_migration_summary = bird_migration_selected |> group_by(Site) |>
   summarise(
-    Median_Lat_Stopover = median(Stopover_Latitude, na.rm = TRUE), 
-    Median_Long_Stopover = median(Stopover_Longitude, na.rm = TRUE), 
-    Median_Lat_Iberian = median(Iberian_Latitude, na.rm = TRUE), 
-    Median_Long_Iberian = median(Iberian_Longitude, na.rm = TRUE), 
-    Median_Lat_Westmost = median(Westmost_Latitude, na.rm = TRUE), 
-    Median_Long_Westmost = median(Westmost_Longitude, na.rm = TRUE), 
-    Median_Lat_Winter = median(Winter_Latitude, na.rm = TRUE), 
-    Median_Long_Winter = median(Winter_Longitude, na.rm = TRUE)
+    Stopover_Latitude = median(Stopover_Latitude, na.rm = TRUE), 
+    Stopover_Longitude = median(Stopover_Longitude, na.rm = TRUE), 
+    Iberian_Longitude = median(Iberian_Longitude, na.rm = TRUE), 
+    Westmost_Latitude = median(Westmost_Latitude, na.rm = TRUE), 
+    Westmost_Longitude = median(Westmost_Longitude, na.rm = TRUE), 
+    Winter_Latitude = median(Winter_Latitude, na.rm = TRUE), 
+    Winter_Longitude = median(Winter_Longitude, na.rm = TRUE)
     )
 
 gt(bird_migration_summary)
@@ -62,20 +61,78 @@ gt(combined_bird_piv)
 ```
 
 ```{r}
-keep_spring = c("Breeding, Stopover, Winter")
-keep_autumn = c("Breeding, Stopover, Westmost, Winter")
+combined_bird_piv <- combined_bird_data |>
+  pivot_longer(
+    cols = ends_with(c("_Longitude", "_Latitude")),
+    names_sep = "_",
+    names_to = c("Location_Type", ".value")
+  )
 
-spring_data = combined_bird_piv |>
-  filter(Location_Type %in% keep_spring)
-autumn_data = combined_bird_piv |>
-  filter(Location_Type %in% keep_autumn)
+gt(combined_bird_piv)
 
-write_csv(spring_data, "output/birds_spring.csv")
-write_csv(autumn_data, "output/birds_autumn.csv")
+spring_vals <- c("Breeding", "Stopover", "Winter")
+autumn_vals <- c("Breeding", "Iberian", "Westmost", "Winter")
+
+spring_data <- combined_bird_piv |>
+  filter(Location_Type %in% spring_vals)
+
+autumn_data <- combined_bird_piv |>
+  filter(Location_Type %in% autumn_vals)
 ```
 
+Visualisation Exercise:
 
+```{r}
+gt(spring_data)
+```
 
+```{r}
+ggplot(
+  spring_data,
+  aes(x = Longitude, y = Latitude)
+) +
+  geom_point()
+  
+```
+
+```{r}
+ggplot(
+  spring_data,
+  aes(x = Longitude, y = Latitude)
+) +
+  geom_point() +
+  annotation_borders(linewidth = 0.2) +
+  coord_quickmap()
+```
+
+```{r}
+min_lon = spring_data |>
+  pull(Longitude) |>
+  min()
+
+max_lon = spring_data |>
+  pull(Longitude) |>
+  max()
+
+min_lat = spring_data |>
+  pull(Latitude) |>
+  min()
+
+max_lat = spring_data |>
+  pull(Latitude) |>
+  max()
+
+ggplot(
+  spring_data,
+  aes(x = Longitude, y = Latitude)
+) +
+  geom_point() +
+  annotation_borders(linewidth = 0.2) +
+  coord_quickmap(
+    xlim = c(min_lon - 2, max_lon + 2),
+    ylim = c(min_lat - 2, max_lat + 2)
+  )
+```
 
 
 

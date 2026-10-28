@@ -1,0 +1,10 @@
+---
+title: "MB1A Practical 2"
+---
+
+```{r}
+library(gt)
+library(tidyverse)
+library(maps)
+```
+
