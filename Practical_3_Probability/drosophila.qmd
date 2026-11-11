@@ -1,0 +1,72 @@
+---
+title: "MB1A Practical 3"
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+set.seed(42)
+
+dcounts <- read_csv("data/drosophila_counts.csv")
+gt(dcounts)
+```
+
+```{r}
+dros_summary = dcounts |>
+  summarise(
+    total_nm = sum(Novel_Mutation_Count),
+    max_nm = max(Novel_Mutation_Count),
+    mean_nm = mean(Novel_Mutation_Count),
+    variance_nm = var(Novel_Mutation_Count)
+  )
+gt(dros_summary)
+```
+```{r}
+ggplot(dcounts, aes(x=Novel_Mutation_Count)) +
+  geom_bar() +
+  ggtitle("Number of Populations with Each Mutation Count - Observed") +
+  xlab("Novel mutation count") +
+  ylab("Number of populations") +
+  theme_minimal()
+```
+```{r}
+sample_mean <- dros_summary |> pull(mean_nm)
+n_populations <- nrow(dcounts)
+mean_sim = c()
+var_sim = c()
+
+for (i in seq_len(1000)) {
+  simulated_counts = rpois(
+    n=nrow(dcounts),
+    lambda = sample_mean
+  )
+  current_mean = mean(simulated_counts)
+  current_var = var(simulated_counts)
+  
+  mean_sim = c(mean_sim, current_mean)
+  var_sim = c(var_sim, current_var)
+}
+
+df_sim <- tibble(
+  mean = mean_sim,
+  var = var_sim,
+  diff = abs(mean_sim - var_sim)
+)
+
+gt(df_sim)
+```
+```{r}
+sample_mean <- dros_summary |>
+  pull(mean_nm)
+sample_variance <- dros_summary |>
+  pull(variance_nm)
+
+sample_diff <- abs(sample_mean - sample_variance)
+
+ggplot(df_sim, aes(x=diff)) +
+  geom_histogram(bins=100) +
+  ggtitle("The Differences Between The Mean and Variance Values In Our Simulated Mutation Counts") +
+  geom_vline(xintercept = sample_diff, colour="red") +
+  theme_minimal()
+```
+

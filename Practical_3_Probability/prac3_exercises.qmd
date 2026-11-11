@@ -37,6 +37,16 @@ for (i in seq_len(10)) {
 gt(breakfasts_table)
 ```
 ```{r}
+flowers_probability = rbinom(125, 200, 0.6)
+total_num = 200
+successes = sum(flowers_probability >= 125)
+
+print(successes/total_num)
+```
+```{r}
+dcounts = read_csv("data/drosophila_counts.csv")
+gt(dcounts)
+
 
 ```
 
