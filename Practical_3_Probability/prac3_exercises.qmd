@@ -1,0 +1,42 @@
+---
+title: "MB1A Practical 3"
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+set.seed(42)
+```
+
+
+```{r}
+for (i in seq_len(20)) {
+  print(i^3)
+}
+```
+```{r}
+for (i in seq_len(5)) {
+  tempString = paste(sample(letters, 5, replace = TRUE), collapse="")
+  print(tempString)
+}
+```
+```{r}
+breakfasts = c("eggs", "toast", "porridge", "bacon", "cereal", "yogurt", "granola bar", "hashbrowns", "sausages", "beans", "fruit")
+nums = c(1, 2, 3, 4, 5)
+breakfasts_table = tibble()
+
+for (i in seq_len(10)) {
+  breakfast_item = sample(breakfasts, size = 1)
+  number_items = sample(nums, size = 1)
+  row = tibble(
+    item = breakfast_item,
+    number = number_items
+  )
+  breakfasts_table = bind_rows(breakfasts_table, row)
+}
+gt(breakfasts_table)
+```
+```{r}
+
+```
+
