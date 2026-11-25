@@ -104,3 +104,93 @@ confint(lm_ht)
 anova(lm_ht)
 ```
 There is evidence that minimum temperature in the coldest month differs between sites where H. tumulorum is present and sites where it is absent (𝐹(1, 74) = 32.79, 𝑝 = 2.07e-07, 𝑅2 = 0.307). The model explains approximately 30.7% of the variation in minimum temperature in the coldest month.
+
+
+
+
+-------------------------------------------------------------------------------------
+
+
+
+```{r}
+ggplot(site_metadata,
+       aes(
+         x=dominant_family, y=mean_insect_mass,
+         fill=dominant_family)) +
+  geom_boxplot() +
+  ggtitle("A Boxplot To Show The Change In Mean Insect Mass For Each Dominant Family") +
+  xlab("Dominant Family") +
+  ylab("Mean Insect Mass") +
+  theme_minimal()
+```
+
+```{r}
+lm_mass_domfam = lm(formula = mean_insect_mass ~ dominant_family, data = site_metadata)
+summary(lm_mass_domfam)
+```
+```{r}
+anova(lm_mass_domfam)
+```
+From the ANOVA summary above, we can reject the null hypothesis that there is no relationship between the mean insect mass and the dominant family. As the probability of getting an F value of 14.719 given that the null hypothesis is true is less than 0.5, we can conclude that the relationship between the mean insect mass and dominant family is significant.
+
+```{r}
+lm_mass_domfam_brht = lm(formula = mean_insect_mass ~ dominant_family + broad_habitat, data = site_metadata)
+anova(lm_mass_domfam_brht)
+```
+The ANOVA analysis above indicates that dominant_family is a significant variable in this model, but broad_habitat is not as the F value is 0.9174, giving a p-value of 0.459 which is greater than 0.05. Therefore, our original model is likely to be better than the model including the broad_habitat parameter.
+
+```{r}
+lm_flowers = lm(formula = mean_insect_mass ~ dominant_family + dominant_flower_order + dominant_family*dominant_flower_order, data = site_metadata)
+anova(lm_flowers)
+```
+From this ANOVA analysis table, we can determine that the dominant_family variable has a singificant impact on the model, but both dominant_flower_order and the interaction between dominant_flower_order and dominant_family appear to not be signficant as they have p-values greater than 0.05.
+
+```{r}
+lm_prec = lm(formula = annual_total_prec ~ annual_mean_temp, data = site_metadata)
+summary(lm_prec)
+```
+These results indicate a strong linear relationship between the annual total precipitation and the annual mean temperature, as the p-value is less than 0.05.
+
+```{r}
+ggplot(site_metadata, aes(x=annual_mean_temp, y=annual_total_prec, fill=annual_mean_temp)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  ggtitle("A Scatterplot To Show The Relationship Between The Annual Mean Temperature And The Annual Total Precipitation") + 
+  xlab("Annual Mean Temperature") +
+  ylab("Annual Total Precipitation") +
+  theme_minimal()
+```
+
+```{r}
+country_habitat_counts <- site_metadata |>
+  count(land_cover, country)
+
+gt(country_habitat_counts)
+```
+
+```{r}
+ggplot(
+  country_habitat_counts,
+  aes(x = country, y = n, fill = land_cover)
+) +
+  geom_col() +
+  ggtitle("Land cover by country - Observed") +
+  xlab("Country") +
+  ylab("Number of sites") +
+  theme_minimal()
+```
+
+```{r}
+cont_table_country_habitat <- xtabs(
+  ~ country + land_cover,
+  data = site_metadata
+)
+print(cont_table_country_habitat)
+```
+```{r}
+chisq_country_habitat <- chisq.test(cont_table_country_habitat)
+print(chisq_country_habitat)
+
+print(chisq_country_habitat$expected)
+```
+
