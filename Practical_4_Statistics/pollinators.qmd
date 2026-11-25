@@ -1,0 +1,87 @@
+---
+title: "MB1A Practical 4"
+---
+
+```{r}
+library(tidyverse)
+library(gt)
+set.seed(42)
+
+insect_counts = read.csv("data/insect_counts.csv")
+flower_counts = read.csv("data/flower_counts.csv")
+site_metadata = read.csv("data/site_metadata.csv")
+
+site_count = nrow(site_metadata)
+print(site_count)
+
+total_insect_obs = insect_counts |>  #define variables
+  pull(n_observed) |>  #pull data from column
+  sum()                #sum data in column
+print(total_insect_obs)
+
+insect_totals = insect_counts |>
+  group_by(species) |>
+  summarise(n_obs = sum(n_observed))
+
+insect_totals = insect_totals |>
+  arrange(desc(n_obs)) 
+
+gt(head(insect_totals))
+
+```
+From this, we can see that the total number of unique sites is 76, the total number of insects observed is 15126, and the species with the greatest number of observations is Episyrphus balteatus, with 1034 observations recorded.
+
+```{r}
+
+htum_counts = insect_counts |>
+  filter(species == "Halictus tumulorum")
+gt(head(htum_counts))
+
+ht_df = htum_counts |>
+  mutate(detected = n_observed > 0)
+gt(head(ht_df))
+
+ht_df = ht_df |>
+  inner_join(site_metadata)
+
+gt(head(ht_df))
+write.csv(ht_df, "output/ht_df.csv")
+```
+
+```{r}
+ht_temp_df <- ht_df |>
+  select(x1km_square, detected, min_temp_coldest_month)
+
+ht_temp_summ <- ht_temp_df |>
+  group_by(detected) |>
+  summarise(
+    mean = mean(min_temp_coldest_month),
+    sd = sd(min_temp_coldest_month),
+    count = n()
+  )
+
+# Separate present and absent sites
+present <- ht_temp_summ |>
+  filter(detected == TRUE)
+
+absent <- ht_temp_summ |>
+  filter(detected == FALSE)
+
+gt(ht_temp_summ)
+
+gt(present)
+
+gt(absent)
+```
+
+```{r}
+ggplot(ht_df,
+       aes(x=detected, y=min_temp_coldest_month, fill=detected)) +
+  geom_boxplot() +
+  ggtitle("Minimum Temperature with and without H. tumulorum - Observed") +
+  xlab("Presence of H. tumulorum") +
+  ylab("Minimum temperature (°C)") +
+  theme_minimal()
+```
+
+
