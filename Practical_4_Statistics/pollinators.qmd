@@ -84,4 +84,23 @@ ggplot(ht_df,
   theme_minimal()
 ```
 
+```{r}
+t.test(min_temp_coldest_month ~ detected, data = ht_temp_df, var.equal = TRUE)
+```
 
+```{r}
+lm_ht = lm(min_temp_coldest_month ~ detected, data = ht_temp_df)
+```
+
+```{r}
+lm_ht = lm(min_temp_coldest_month ~ detected, data = ht_temp_df)
+summ_lm_ht = summary(lm_ht)
+print(summ_lm_ht)
+```
+```{r}
+confint(lm_ht)
+```
+```{r}
+anova(lm_ht)
+```
+There is evidence that minimum temperature in the coldest month differs between sites where H. tumulorum is present and sites where it is absent (𝐹(1, 74) = 32.79, 𝑝 = 2.07e-07, 𝑅2 = 0.307). The model explains approximately 30.7% of the variation in minimum temperature in the coldest month.
